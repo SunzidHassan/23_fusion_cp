@@ -18,16 +18,17 @@ Odor Source Localization (OSL) technology allows autonomous agents like mobile r
 
 ## 🚀 Getting Started
 
-### Hardware
-We used the Turtlebot3 mobile robot for our experiment.
-
-
-
 ### 1. Hardware Setup ⚙️
 Turtlebot3 mobile robot platform was used in this work. We paired a WindSonic Anemometer and MQ3 alcohol detector with the robot.
 
 ### 2. Software Setup ⚙️
 This experiment uses Turtlebot3 waffle-pi running ROS Noetic. The software setup is included [Here](https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/).
+
+Required packages
+```bash
+pip install -r requirements.txt
+```
+
 Workspace setup
 ```bash
 mkdir catkin_ws && cd catkin_ws && mkdir src
@@ -87,11 +88,12 @@ Update the packages file `src/my_robot_controller/package.xml`:
   <exec_depend>tf</exec_depend>
   <exec_depend>tf2_msgs</exec_depend>
 
-
   <export>
   </export>
 </package>
 ```
+
+Finally, save the `turtlebot_LLM_nav3` file at the `catkin_ws/my_robot_controller/scripts` directory.
 
 ### 3. Running the Algorithm 🏃
 Note the IP address of the Turtlebot. Asumming the IP address is: 192.168.0.102
