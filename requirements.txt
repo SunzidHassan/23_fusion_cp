@@ -1,0 +1,5 @@
+--upgrade numpy scipy
+ultralytics
+opencv-python
+numpy
+pandas
